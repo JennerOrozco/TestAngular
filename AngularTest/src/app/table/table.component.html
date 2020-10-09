@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">
+      DATOS TABLA MOTIVO
+
+      <button routerLink="./add" type="button" class="btn btn-success">Agregar</button>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-bordered" style="width:100%" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>DESCRIPCION</th>
+                    <th>ESTADO</th>
+                    <th>TIPO</th>
+                    <th>OPCIONES</th>            
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dato of datos">            
+                    <td>{{dato.motivo}}</td>
+                    <td>{{dato.des_motivo}}</td>
+                    <td>{{dato.estado}}</td>
+                    <td>{{dato.tipo}}</td>     
+                    <td>
+                        <button [routerLink]="'./upd/' + dato.motivo" type="button" class="btn btn-warning">Modificar</button>
+                        <button (click)="DeleteData(dato.motivo)" type="button" class="btn btn-danger">Eliminar</button>
+                    </td>     
+                </tr>        
+        </table>    
+        
+        
+      
+    </div>
+  </div>
+

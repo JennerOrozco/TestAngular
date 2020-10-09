@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group">
+      <label for="Descripcion">Descripcion</label>
+      <textarea [(ngModel)]='motivo.des_motivo' name="des_motivo" type="textarea" class="form-control"  aria-describedby="emailHelp"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="Estado">Estado</label>
+      <input [(ngModel)]='motivo.estado' name="estado" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+        <label for="Tipo">Tipo</label>
+        <input [(ngModel)]='motivo.tipo' name="tipo" type="text" class="form-control" >
+      </div>    
+    <button (click)="AgregarMotivo()" class="btn btn-primary">Submit</button>
+</form>
