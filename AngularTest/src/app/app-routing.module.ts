@@ -7,6 +7,7 @@ import { TableComponent } from "./table/table.component";
 import { AddComponent } from "./add/add.component";
 import { UpdateComponent } from "./update/update.component";
 import { DeleteComponent } from "./delete/delete.component";
+import { ContactoComponent } from './contacto/contacto.component';
 
 const routes: Routes = [{
   path: '',
@@ -33,6 +34,9 @@ const routes: Routes = [{
     {
       path:'tabla/add',
       component: AddComponent
+    },{
+      path:'contacto',
+      component: ContactoComponent
     }
   ]
 }
